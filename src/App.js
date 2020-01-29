@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SignUp from "./components/loginSystem/SignUp";
+import Login from "./components/loginSystem/Login";
+import Dashboard from "./Pages/Dashboard";
+import Thinking from "./Pages/Thinking";
+import QuotesPage from "./Pages/QuotesPage";
+import Navbar from "./components/Dangiri/Navbar";
+import ProtectedRoute from "./components/Protected";
 function App() {
+  const users = [];
+  const GetInfoUser = user => {
+    console.log("Funca");
+    users.push(user);
+    console.log(users);
+  };
+  const [quote, setQuote] = useState({});
+  const getQuote = q => {
+    setQuote(q);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <SignUp users={users} SendUser={GetInfoUser} />
+        </Route>
+        <Route exact path="/home">
+          <Login users={users} />
+        </Route>
+        <ProtectedRoute exact path="/dashboard">
+          <Dashboard getQuote={setQuote} />
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/quotes">
+          <QuotesPage />
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/quotes/:id">
+          <Thinking quote={quote} />
+        </ProtectedRoute>
+      </Switch>
+    </Router>
   );
 }
 

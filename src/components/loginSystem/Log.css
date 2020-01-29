@@ -1,0 +1,18 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 540px;
+  border: 3px solid;
+  background-color: #fed90f;
+}
+.headLog {
+  background-color: #70d1fe;
+}
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,30 @@
+.quote {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  align-items: center;
+  align-self: center;
+  border: 5px solid;
+  border-radius: 25px;
+  background-color: #70d1fe;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.classyCage {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  align-self: center;
+}
+img {
+  object-fit: cover;
+}
+.more-classyCAge {
+  align-self: center;
+}
+small {
+  float: right;
+  margin-right: 20px;
+}
+.list {
+  padding: 60px;
+}

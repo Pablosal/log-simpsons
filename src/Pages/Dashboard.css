@@ -1,0 +1,24 @@
+.front-welcome {
+  display: grid;
+  grid-template-columns: 4fr;
+  align-items: center;
+  justify-items: center;
+}
+.backshadow {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  align-items: center;
+  /* overflow: scroll; */
+}
+.backshadow > h2 {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+.quotes_list {
+  padding: 20px;
+}

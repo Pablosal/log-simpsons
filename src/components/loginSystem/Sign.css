@@ -1,0 +1,10 @@
+.heading {
+  background-color: #70d1fe;
+}
+.inputs {
+  background-color: #fed90f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

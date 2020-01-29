@@ -1,0 +1,4 @@
+export const SAVE_QUOTES = "SAVE_QUOTES";
+export const SAVE_FAVORITE_QUOTE = "SAVE_FAVORITE_QUOTE";
+export const SAVE_COMMENTS = "SAVE_COMMENTS";
+export const SET_LOADING = "SET_LOADING";
